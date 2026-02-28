@@ -1467,6 +1467,11 @@
             height: 747px;
         }
 
+        /* Use Alice font for Nhà gái / Nhà trai block */
+        #w-f9da4ivv .text-block-css {
+            font-family: 'Alice', serif;
+        }
+
         #w-f9da4ivv .section-wrapper {
             opacity: 1;
         }
@@ -3966,6 +3971,37 @@
             -webkit-animation-iteration-count: 1;
             animation-duration: 3s;
             -webkit-animation-duration: 3s;
+        }
+
+        /* Smooth, GPU-friendly defaults for all page animations */
+        .is-animation.animation .text-block-css,
+        .is-animation.animation .button-css,
+        .is-animation.animation .line-css {
+            animation-duration: 1.2s !important;
+            -webkit-animation-duration: 1.2s !important;
+            animation-timing-function: ease-out !important;
+            -webkit-animation-timing-function: ease-out !important;
+            will-change: transform, opacity;
+        }
+
+        .is-animation.animation .image-block-css {
+            animation-duration: 1.4s !important;
+            -webkit-animation-duration: 1.4s !important;
+            animation-timing-function: ease-out !important;
+            -webkit-animation-timing-function: ease-out !important;
+            will-change: transform, opacity;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .is-animation.animation .text-block-css,
+            .is-animation.animation .button-css,
+            .is-animation.animation .line-css,
+            .is-animation.animation .image-block-css,
+            .animationText span i,
+            .loader,
+            .button-loader {
+                animation: none !important;
+            }
         }
     </style>
     <style type="text/css" media="screen and (max-width: 767px)">
@@ -6736,11 +6772,6 @@
 </head>
 
 <body ontouchstart>
-    <audio id="123" autoplay preload loop>
-        <source
-            src="https://dl.dropboxusercontent.com/scl/fi/npl919xx2edzgxl3ba7np/ytmp3free.cc_em-dong-y-i-do-duc-phuc-x-911-x-khac-hung-official-music-video-valentine-2023-youtubemp3free.org-mp3cut.net-_out.mp3?rlkey=ixwf520pz6evxa3nz48odi3rn&st=xmn9p1dz&&raw=1"
-            type="audio/mp3">
-    </audio>
     <div class="pageview">
         <div id='webcake-alert-msg' class='w-alert-message-wrapper' style="display: none;z-index:9999999;"></div>
         <div id="w-5fieb1sl">
@@ -7173,6 +7204,9 @@
     <link rel="preload"
         href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900|Barlow:100,300,400,700,900|Arial:100,300,400,700,900&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet';">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
     <style>
         @font-face {
             font-family: "BlackMango-Medium.otf";
@@ -9050,7 +9084,7 @@
 
                 },
                 "extra_css": "",
-                "extra_script": "let audioElem = document.getElementById('123');\r\nif (audioElem) {\r\n    document.body.addEventListener('touchstart', () => {\r\n        audioElem.play().catch(error => {\r\n            console.log('Playback failed:', error);\r\n        });\r\n    });\r\n    document.body.addEventListener('click', () => {\r\n        audioElem.play().catch(error => {\r\n            console.log('Playback failed:', error);\r\n        });\r\n    });\r\n}"
+                "extra_script": ""
             }
         };
     </script>
